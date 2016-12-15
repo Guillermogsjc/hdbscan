@@ -442,7 +442,7 @@ class RobustSingleLinkage(BaseEstimator, ClusterMixin):
     @property
     def cluster_hierarchy_(self):
         if self._cluster_hierarchy_ is not None:
-            return SingleLinkageTree(self._cluster_hierarchy_)
+            return self._cluster_hierarchy_
         else:
             warn('No single linkage tree was generated; try running fit'
                  ' first.')
